@@ -75,6 +75,7 @@ namespace VideoFileRenamer
             if (args.Length == 0) { Parametros test = new Parametros(); }
             if (args.Length == 1) { Parametros test = new Parametros(args[0]); }
             if (args.Length == 2) { Parametros test = new Parametros(args[0], args[1]); }
+            // hola que tal
         }
     }
 
