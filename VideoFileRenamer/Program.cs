@@ -97,6 +97,20 @@ namespace VideoFileRenamer
 
     }
 
+    class Ficheros
+    {
+        public static string[] VideoExtensions = { "avi", "mpg", "mkv" };
+        
+        public Ficheros(string Ruta)
+        {
+
+        }
+
+
+    }
+
+
+
     class Program
     {
         public static Parametros Config;
@@ -128,12 +142,15 @@ namespace VideoFileRenamer
             if (Continuar)
             {
                 Console.WriteLine(string.Format("Se buscaran los ficheros de video del path: {0}", Config.Ruta));
-                Console.WriteLine(string.Format("El nombre para los ficheros sera: {0}", Config.NombreFicheros));                
+                Console.WriteLine(string.Format("El nombre para los ficheros sera: {0}", Config.NombreFicheros));
+                FileObserver Ficheros = new FileObserver(Config.Ruta, Config.NombreFicheros);
             }
 
+            
 
         }
     }
+
 
 }
 
